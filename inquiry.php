@@ -17,8 +17,8 @@
         $message = $_POST['message'];
         $current_time = date("Y-m-d h:i:sa");
         
-        $query = "INSERT INTO inquiry(customer_id,query_type,query,status,created_at,updated_at)"
-                . " VALUES('$c_id','$inquiry_type','$message','0','$current_time','$current_time')";
+        $query = "INSERT INTO inquiry(customer_id,query_type,query,status)"
+                . " VALUES('$c_id','$inquiry_type','$message','0')";
         
         $result = mysqli_query($con, $query);
         
@@ -30,12 +30,13 @@
     $inquiries = null;
     // getting all inquiries of user
     $sql = "SELECT * FROM inquiry WHERE customer_id='$c_id'";
+   // $sql="SELECT inquiry.*, invoice.invoice_id FROM inquiry LEFT JOIN invoice ON inquiry.id=invoice.inquiry_id where inquiry.customer_id='$c_id' ORDER BY inquiry.id";
     $inquiries = mysqli_query($con, $sql);
-    
     $inquiries_assigned_to_contractor = null;
     // getting all inquiries of user
     $sql2 = "SELECT * FROM inquiry WHERE contractor_id='$c_id'";
-    //var_dump($sql2);
+   // $sql2="SELECT inquiry.*, invoice.invoice_id FROM inquiry LEFT JOIN invoice ON inquiry.id=invoice.inquiry_id where inquiry.contractor_id='$c_id' ORDER BY inquiry.id";
+    // var_dump($sql2);
     $inquiries_assigned_to_contractor = mysqli_query($con, $sql2);
     
 ?>
@@ -95,6 +96,7 @@
                 <th scope="col">Inquiry Type</th>
                 <th scope="col">Inquiry</th>
                 <th scope="col">Status</th>
+                <th scope="col">Invoice</th>
               </tr>
             </thead>
             <tbody>
@@ -106,16 +108,28 @@
                         <tr>
                             <td><?= $row["query_type"] ?></td>
                             <td><?= $row["query"] ?></td>
-                            <td><?php if($row["status"] == 0){
-                                echo "<a href=\"view-customer-inquiry.php?id=".$row['id']."\">Pending</a>";
-                            }else if($row["status"] == 1){
-                                echo "Estimated";
-                            }else if($row["status"] == 2){
-                                echo "In Progress";
-                            }else if($row["status"] == 3){
-                                echo "Completed";
-                            } ?>
+                            <td>
+                              <!-- Status Values: 0=pending, 1=estimated, 2=accepted, 3= rejected, 4=in progress, 5=completed, 6=cancelled  -->
+                              <a href="view-customer-inquiry.php?id=<?=$row['id']?>"><i class='fa fa-edit'></i> 
+                                <?php 
+                                if($row["status"] == 0){
+                                    echo "Pending";
+                                }else if($row["status"] == 1){
+                                    echo "Estimated";
+                                }else if($row["status"] == 2){
+                                    echo "Accepted";
+                                }else if($row["status"] == 3){
+                                    echo "Rejected";
+                                }else if($row["status"] == 4){
+                                    echo "In Progress";
+                                }else if($row["status"] == 5){
+                                    echo "Completed";
+                                }else if($row["status"] == 6){
+                                    echo "Cancelled";
+                                } ?>
+                            </a>
                             </td>
+                            <td><?php echo ($row['status']>=5) ?  "<a class='btn btn-success' href='invoice.php?inquiry_id=".$row['id']."&customer_id=".$row['customer_id']."&contractor_id=".$row['contractor_id']."'><i class='far fa-eye'></i> view</a>" : "----" ?></td>
                         </tr>
                     <?php } } } else{
                         if (mysqli_num_rows($inquiries_assigned_to_contractor)) {
@@ -123,16 +137,28 @@
                         <tr>
                             <td><?= $row2["query_type"] ?></td>
                             <td><?= $row2["query"] ?></td>
-                            <td><?php if($row2["status"] == 0){
-                                echo "<a href=\"view-customer-inquiry.php?id=".$row2['id']."\">Pending</a>";
-                            }else if($row2["status"] == 1){
-                                echo "Estimated";
-                            }else if($row2["status"] == 2){
-                                echo "In Progress";
-                            }else if($row2["status"] == 3){
-                                echo "Completed";
-                            } ?>
+                             <!-- Status Values: 0=pending, 1=estimated, 2=accepted, 3= rejected, 4=in progress, 5=completed, 6=cancelled  -->
+                            <td>
+                              <a href="view-contractor-inquiry.php?id=<?=$row2['id']?>"><i class='fa fa-edit'></i> 
+                                <?php 
+                                if($row2["status"] == 0){
+                                    echo "Pending";
+                                }else if($row2["status"] == 1){
+                                    echo "Estimated";
+                                }else if($row2["status"] == 2){
+                                    echo "Assigned"; //Accepted
+                                }else if($row2["status"] == 3){
+                                    echo "Rejected";
+                                }else if($row2["status"] == 4){
+                                    echo "In Progress";
+                                }else if($row2["status"] == 5){
+                                    echo "Completed";
+                                }else if($row2["status"] == 6){
+                                    echo "Cancelled";
+                                } ?>
+                            </a>
                             </td>
+                            <td><?php echo ($row2['status']>=5) ?  "<a class='btn btn-success' href='invoice.php?inquiry_id=".$row2['id']."'><i class='far fa-eye'></i> view</a>" : "----" ?></td>
                         </tr>
                         
                     <?php }}} ?>

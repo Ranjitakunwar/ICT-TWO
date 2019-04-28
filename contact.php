@@ -12,7 +12,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>For Quick Enquiries Contact Us Now</p>
+          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
         </div>
 
         <div class="row contact-info">
@@ -21,7 +21,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
-              <address>James Cook University, Queen Street, Brisbane, Australia</address>
+              <address>A108 Adam Street, NY 535022, USA</address>
             </div>
           </div>
 
@@ -29,7 +29,7 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+61 43 1145654</a></p>
+              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">itinvoicing@gmail.com</a></p>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
             </div>
           </div>
 

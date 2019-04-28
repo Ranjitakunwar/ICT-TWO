@@ -20,6 +20,7 @@
         
         if ($result) {
             $query_sent = TRUE;
+            
         }
     }
 
@@ -85,23 +86,23 @@
                 <?php 
                   if($inquiry[5] == 0){
                     echo 'Pending';
-                  }else if($inquiry[5] == 1){ 
-                    //mean inquiry has been accepted, now customer have to accept or reject the estimate
+                  }else if($inquiry[5] == 2 || $inquiry[5] == 4){ 
+                    //mean inquiry has been assigned. now contractor have to update its status to (In progress, completed or cancelled)
                 ?>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="status" value="2" <?=  ($inquiry[5]== 2) ?  "checked" : "" ;  ?> > Accept 
+                    <input type="radio" name="status" value="4" <?=  ($inquiry[5]== 4) ?  "checked" : "" ;  ?> > In Progress 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    <input type="radio" name="status" value="3" <?=  ($inquiry[5]== 3) ?  "checked" : "" ;  ?> > Reject<br>
+                    <input type="radio" name="status" value="5" <?=  ($inquiry[5]== 5) ?  "checked" : "" ;  ?> > Completed
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input type="radio" name="status" value="6" <?=  ($inquiry[5]== 6) ?  "checked" : "" ;  ?> > Cancelled<br>
 
                 <?php 
                   }else{
-                    //if user has already accepted/rejected the status then don't allow customer to change the option
-                      if($inquiry[5] == 2){
-                        echo "Accepted";
+                    //if inquiry status is estimate, rejected, completed or cancelled then don't allow contractor to change the status
+                      if($inquiry[5] == 1){
+                        echo "Estimated";
                       }else if($inquiry[5] == 3){
                         echo "Rejected";
-                      }else if($inquiry[5] == 4){
-                        echo "In Progress";
                       }else if($inquiry[5] == 5){
                         echo "Completed";
                       }else if($inquiry[5] == 6){
@@ -114,7 +115,7 @@
             
             </div>
             <?php 
-              if($inquiry[5] == 1){
+              if($inquiry[5] == 2 || $inquiry[5] == 4){
                 echo '<div ><button class="text-left" type="submit">Submit</button> </div>';
               }
             ?>

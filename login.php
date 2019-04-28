@@ -13,7 +13,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        $query = "SELECT * FROM users WHERE email='$username' AND password='$password'  LIMIT 1";
+        $query = "SELECT * FROM users WHERE email='$username' AND password='$password' and role!='admin' LIMIT 1";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_row($result);
         
