@@ -39,13 +39,13 @@
           </div>
 
           <div class="col-lg-6 content">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h2>We are here to help</h2>
+            <h3></h3>
 
             <ul>
-              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Even a small problem with any part of your computers can adversely affect systems and servers and bring your business to a virtual halt. As your IT partner, you can count on us to diligently monitor your system and often discover and resolve problems before you were even aware there was one. Our vigilance allows us to react and quickly fix problems so you can continue your work without missing a beat.</li>
+              <li><i class="ion-android-checkmark-circle"></i>We are very proactive in preventing technical issues before they arise.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Support for your existing IT department</li>
             </ul>
 
           </div>
@@ -64,25 +64,25 @@
       <div class="container">
         <div class="section-header">
           <h2>Testimonials</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>We continue to impress with the levels of service and professionalism at I.T. Invoicing. We provide excellent competitive Business IT Support with outstanding technical backup.</p>
         </div>
         <div class="owl-carousel testimonials-carousel">
 
             <div class="testimonial-item">
               <p>
                 <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                Thanks to the great team professionals for a great job. This wasn’t easy and they were patient and helpful throughout.
                 <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
               <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
+              <h4>CEO &amp; Founder</h4>
             </div>
 
             <div class="testimonial-item">
               <p>
                 <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                Our experience with our previous service provider was so frustrating that we were nervous about selecting a new provider. We searched for a cost-effective and service oriented company to manage our systems. We are so happy with the service. THUMBS UP. 
                 <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
@@ -93,7 +93,7 @@
             <div class="testimonial-item">
               <p>
                 <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                I just wanted to send a quick note of KUDOS to the awesome IT guys at IT Invoicing. They are always friendly, professional, and can fix anything! 
                 <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
@@ -104,7 +104,7 @@
             <div class="testimonial-item">
               <p>
                 <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+               IT Invoicing is the best IT solution provider. They understood the needs and provided solutions we had not considered. I cannot say enough good things about the fast, exemplary customer service they provide. 
                 <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
@@ -115,7 +115,7 @@
             <div class="testimonial-item">
               <p>
                 <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              I am so happy that I chose IT Invoicing to solve my problems. They are super friendly and solved my problem way too fast. 
                 <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
