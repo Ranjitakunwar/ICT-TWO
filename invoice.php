@@ -41,7 +41,8 @@
 <div class="float-right">
   <STRONG>Invoice</STRONG>
   <div>SRN# ITI-001<?= $row['id']?></div>
-  <div>Gross Amount= <?= $row['cost']?>$</div>
+  <div>A.B.N  69234567812</div>
+  <div>Contact  +61 43 1145654</div>
 </div>
 </div>
 </div>
@@ -141,25 +142,14 @@
 <div class="mb-2">
 <strong>Summary</strong>
 </div>
- 
 <tr>
 <td class="left">
-<strong>Subtotal</strong>
+<strong>GST included in Total</strong>
 </td>
-<td class="right">$<?= $row['cost']?></td>
+<td class="right">
+<strong>$<?= $row['cost']/10;?></strong></td>
 </tr>
 <tr>
-<td class="left">
-<strong>Tax</strong>
-</td>
-<td class="right">0</td>
-</tr>
-<tr>
-<td class="left">
- <strong>Dicsount</strong>
-</td>
-<td class="right">0</td>
-</tr>
 <tr>
 <td class="left">
 <strong>Total</strong>
@@ -168,6 +158,10 @@
 <strong>$<?= $row['cost']?></strong>
 </td>
 </tr>
+<td class="center">
+<strong> Thank You for choosing us! </strong>
+</td>
+
 </tbody>
 </table>
 
